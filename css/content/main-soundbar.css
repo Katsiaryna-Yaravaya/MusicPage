@@ -1,0 +1,35 @@
+.soundbar-menu {
+    display: flex;
+    list-style-type: none;
+    margin-left: 48px;
+    padding: 0;
+    margin-top: 40px;
+    margin-bottom: 23px;
+}
+
+.soundbar-menu-item {
+    padding-right: 26px;
+    height: 31px;
+    border-bottom: 1px solid #D3D3D3;
+}
+
+.soundbar-menu-item:last-child {
+    padding: 0;
+}
+
+.soundbar-menu-link {
+    padding-top: 5px;
+    text-decoration: none;
+    color: black;
+}
+
+.soundbar-menu-link:hover {
+    color: red;
+    padding-bottom: 10px;
+    border-bottom: 3px solid red;
+}
+
+.soundbar-menu-link .fa{
+    font-size: small;
+    margin-left: 3px;
+}

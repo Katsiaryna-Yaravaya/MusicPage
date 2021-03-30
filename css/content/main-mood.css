@@ -1,0 +1,14 @@
+.mood {
+    padding-left: 48px;
+    margin-bottom: 25px;
+    margin-top: 8px;
+}
+
+.mood p {
+    font-weight: bold;
+}
+
+.mood span {
+    color: #A9A9A9;
+    font-size: 13px;
+}

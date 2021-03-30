@@ -1,0 +1,25 @@
+.albums {
+    max-width: 825px;
+    margin-left: -35px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.albums-box {
+    padding: 0;
+    margin-bottom: 39px;
+    margin-left: 84px;
+}
+
+.albums img {
+    width: 190px;
+    height: 190px;
+}
+
+.albums-box h3 {
+    margin: 3px 0;
+}
+
+.albums-box span {
+    color: #A9A9A9;
+}

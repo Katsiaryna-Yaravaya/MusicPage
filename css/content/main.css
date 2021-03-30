@@ -1,0 +1,102 @@
+.main {
+    display: flex;
+    align-items: center;
+    width: 1040px;
+    position: relative;
+}
+
+.main-images {
+    display: flex;
+}
+
+.main > i {
+    position: absolute;
+    font-size: 30px;
+    color: #505050;
+    font-weight: 600;
+}
+
+.main-first-icon {
+    padding-left: 15px;
+}
+
+.main-images-pinkFire {
+    background: url("../../image/pinkFire-chb.jpg");
+    display: block;
+    background-size: cover;
+    width: 187px;
+    height: 187px;
+}
+.main-images-pinkFire:hover {
+    background: url("../../image/pinkFire.jpg");
+    background-size: cover;
+    width: 187px;
+    height: 187px;
+}
+
+.main-images-girl {
+    background: url("../../image/girl-chb.jpg");
+    display: block;
+    background-size: cover;
+    width: 187px;
+    height: 187px;
+}
+.main-images-girl:hover {
+    background: url("../../image/girl.jpg");
+    background-size: cover;
+    width: 187px;
+    height: 187px;
+}
+
+.main-images-avakado {
+    background: url("../../image/avakado-chb.jpg");
+    display: block;
+    background-size: cover;
+    width: 187px;
+    height: 187px;
+}
+.main-images-avakado:hover {
+    background: url("../../image/avakado.jpg");
+    background-size: cover;
+    width: 187px;
+    height: 187px;
+}
+
+.main-images-relax {
+    background: url("../../image/relax-chb.jpg");
+    display: block;
+    background-size: cover;
+    width: 187px;
+    height: 187px;
+}
+
+.main-images-relax:hover {
+    background: url("../../image/relax.jpg");
+    background-size: cover;
+    width: 187px;
+    height: 187px;
+}
+
+.main-images-work {
+    background: url("../../image/work-chb.png");
+    display: block;
+    background-size: cover;
+    width: 187px;
+    height: 187px;
+}
+.main-images-work:hover {
+    background: url("../../image/work.png");
+    background-size: cover;
+    width: 187px;
+    height: 187px;
+}
+
+.main-second-icon {
+    padding-right: 15px;
+    right: 0;
+}
+
+
+
+
+

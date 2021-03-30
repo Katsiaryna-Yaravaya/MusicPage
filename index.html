@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MusicPage</title>
+
+    <!--    подключение шрифтов-->
+    <link rel="stylesheet" href="fonts/all.min.css">
+
+    <!--    иконки FontsAwesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+          integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+          crossorigin="anonymous">
+
+    <!--    обнуление браузерных css настроек-->
+    <link rel="stylesheet" href="css/reset.css">
+
+    <!--    подключение css-->
+    <link rel="stylesheet" href="css/container.css">
+    <link rel="stylesheet" href="css/button/button.css">
+    <link rel="stylesheet" href="css/sidebar/sidebar.css">
+    <link rel="stylesheet" href="css/content/content.css">
+    <link rel="stylesheet" href="css/content/header.css">
+    <link rel="stylesheet" href="css/content/main.css">
+    <link rel="stylesheet" href="css/content/main-mood.css">
+    <link rel="stylesheet" href="css/content/main-songs.css">
+    <link rel="stylesheet" href="css/content/main-soundbar.css">
+    <link rel="stylesheet" href="css/content/main-albums.css">
+
+</head>
+<body>
+<section class="container">
+
+    <div class="sidebar">
+        <h5 class="sidebar-title">18+</h5>
+
+        <nav class="sidebar-nav">
+            <ul class="sidebar-menu">
+                <li class="sidebar-menu-item">
+                    <a href="#" class="sidebar-menu-link">Подборки</a>
+                </li>
+                <li class="sidebar-menu-item">
+                    <a href="#" class="sidebar-menu-link">Рекомендации</a>
+                </li>
+            </ul>
+        </nav>
+
+        <img class="sidebar-image" src="image/zivert.jpg" alt="">
+
+        <div class="sidebar-icon">
+            <i class="fas fa-backward"></i>
+            <i class="fas fa-play"></i>
+            <i class="fas fa-forward"></i>
+        </div>
+
+        <span class="sidebar-copy">
+            <i class="far fa-copyright"></i>
+            Работает на технологии
+         </span>
+    </div>
+
+    <div class="content">
+        <header class="header">
+            <div class="header-search">
+                <span class="icon"><i class="fa fa-search"></i></span>
+                <label for="search"></label>
+                <input type="search" id="search" placeholder="Трек, исполнитель"/>
+            </div>
+
+            <div class="header-icons">
+                <img class="header-icons-png" src="image/icons-repeat.png" alt="">
+                <i class="fa far fa-random"></i>
+                <i class="fa fas fa-volume-up"></i>
+                <button class="buttonRed">Войти</button>
+            </div>
+        </header>
+
+        <main>
+            <section class="main">
+                <i class="main-first-icon fas fa-angle-left"></i>
+                <div class="main-images">
+                    <p><a href="#" class="main-images-pinkFire"> </a></p>
+                    <p><a href="#" class="main-images-girl"> </a></p>
+                    <p><a href="#" class="main-images-avakado"> </a></p>
+                    <p><a href="#" class="main-images-relax"> </a></p>
+                    <p><a href="#" class="main-images-work"> </a></p>
+                </div>
+                <i class="main-second-icon fas fa-angle-right"></i>
+            </section>
+
+            <section class="mood">
+                <p>
+                    Триумфаторы
+                </p>
+                <span>
+                     Под настроение
+                </span>
+            </section>
+
+            <section class="songs">
+                <div class="box">
+                    <div>
+                        <img class="songs-image" src="image/Жара.jpg" alt="">
+                    </div>
+                    <div class="songs-name">
+                        <p class="songs-name-first">
+                            Жара
+                        </p>
+                        <p>
+                            Елена Темникова
+                        </p>
+                    </div>
+                    <div class="songs-time">
+                        <p>
+                            2:53
+                        </p>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div>
+                        <img class="songs-image" src="image/senorita.jpg" alt="">
+                    </div>
+                    <div class="songs-name">
+                        <p class="songs-name-first">
+                            Señorita
+                        </p>
+                        <p>
+                            Shawn Mendes
+                        </p>
+                    </div>
+                    <div class="songs-time">
+                        <p>
+                            3:10
+                        </p>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div>
+                        <img class="songs-image" src="image/Ashley.png" alt="">
+                    </div>
+                    <div class="songs-name">
+                        <p class="songs-name-first">
+                            On A Roll
+                        </p>
+                        <p>
+                            Ashley O
+                        </p>
+                    </div>
+                    <div class="songs-time">
+                        <p>
+                            2:34
+                        </p>
+                    </div>
+                </div>
+
+            </section>
+
+            <button class="songs-button">Все 26 треков</button>
+
+            <nav class="soundbar-nav">
+                <ul class="soundbar-menu">
+                    <li class="soundbar-menu-item">
+                        <a href="#" class="soundbar-menu-link">Под настроение</a>
+                    </li>
+                    <li class="soundbar-menu-item">
+                        <a href="#" class="soundbar-menu-link">Для разных занятий</a>
+                    </li>
+                    <li class="soundbar-menu-item">
+                        <a href="#" class="soundbar-menu-link">Музыка из фильмов и сериалов</a>
+                    </li>
+                    <li class="soundbar-menu-item">
+                        <a href="#" class="soundbar-menu-link">По эпохам</a>
+                    </li>
+                    <li class="soundbar-menu-item">
+                        <a href="#" class="soundbar-menu-link">Ещё
+                            <i class="fa fas fa-chevron-down"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="albums">
+                <div class="albums-box">
+                    <img src="image/pinkFire.jpg" alt="">
+                    <h3>
+                        Триумфаторы
+                    </h3>
+                    <span>
+                        33 трека
+                    </span>
+                </div>
+
+                <div class="albums-box">
+                    <img src="image/girl.jpg" alt="">
+                    <h3>
+                        Боссанова
+                    </h3>
+                    <span>
+                        30 треков
+                    </span>
+                </div>
+
+                <div class="albums-box">
+                    <img src="image/avakado.jpg" alt="">
+                    <h3>
+                        Безоблачный оптимизм
+                    </h3>
+                    <span>
+                        30 треков
+                    </span>
+                </div>
+
+                <div class="albums-box">
+                    <img src="image/relax.jpg" alt="">
+                    <h3>
+                        Вне времени
+                    </h3>
+                    <span>
+                        28 треков
+                    </span>
+                </div>
+
+                <div class="albums-box">
+                    <img src="image/work.png" alt="">
+                    <h3>
+                        Голос урбана
+                    </h3>
+                    <span>
+                        25 треков
+                    </span>
+                </div>
+            </div>
+        </main>
+    </div>
+</section>
+
+</body>
+</html>

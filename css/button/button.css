@@ -1,0 +1,19 @@
+.buttonRed {
+    margin-left: 3px;
+    background: red;
+    color: white;
+    outline: none;
+    border: none;
+    width: 85px;
+    height: 44px;
+}
+
+.songs-button {
+    margin-left: 45px;
+    background: red;
+    color: white;
+    outline: none;
+    border: none;
+    width: 186px;
+    height: 47px;
+}
