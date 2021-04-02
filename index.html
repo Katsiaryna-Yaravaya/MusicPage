@@ -15,6 +15,10 @@
     <!--    обнуление браузерных css настроек-->
     <link rel="stylesheet" href="css/reset.css">
 
+
+    <!--    подключение скриптов-->
+    <script src="js/main.js" defer></script>
+
     <!--    подключение css-->
     <link rel="stylesheet" href="css/container.css">
     <link rel="stylesheet" href="css/button/button.css">
@@ -26,6 +30,7 @@
     <link rel="stylesheet" href="css/content/main-songs.css">
     <link rel="stylesheet" href="css/content/main-soundbar.css">
     <link rel="stylesheet" href="css/content/main-albums.css">
+
 
 </head>
 <body>
@@ -45,12 +50,18 @@
             </ul>
         </nav>
 
-        <img class="sidebar-image" src="image/zivert.jpg" alt="">
+        <img class="sidebarImage" src="image/zivert.jpg" alt="">
+        <img id="track-image" class="sidebarImage">
+
+        <div class="duration">
+            <input type="range" min="0" max="100" value="0" id="duration-slider" onchange="changeDuration()">
+        </div>
+
 
         <div class="sidebar-icon">
-            <i class="fas fa-backward"></i>
-            <i class="fas fa-play"></i>
-            <i class="fas fa-forward"></i>
+            <button onclick="previousSong()" id="pre"><i class="fas fa-backward" aria-hidden="true"></i></button>
+            <button onclick="justPlay()" id="play"><i class="fas fa-play" aria-hidden="true"></i></button>
+            <button onclick="nextSong()" id="next"><i class="fas fa-forward" aria-hidden="true"></i></button>
         </div>
 
         <span class="sidebar-copy">
@@ -71,6 +82,9 @@
                 <img class="header-icons-png" src="image/icons-repeat.png" alt="">
                 <i class="fa far fa-random"></i>
                 <i class="fa fas fa-volume-up"></i>
+<!--                <div class="header-volume">-->
+<!--                    <input type="range" class="header-icons-volume" min="0" max="11">-->
+<!--                </div>-->
                 <button class="buttonRed">Войти</button>
             </div>
         </header>
@@ -97,64 +111,8 @@
                 </span>
             </section>
 
-            <section class="songs">
-                <div class="box">
-                    <div>
-                        <img class="songs-image" src="image/Жара.jpg" alt="">
-                    </div>
-                    <div class="songs-name">
-                        <p class="songs-name-first">
-                            Жара
-                        </p>
-                        <p>
-                            Елена Темникова
-                        </p>
-                    </div>
-                    <div class="songs-time">
-                        <p>
-                            2:53
-                        </p>
-                    </div>
-                </div>
-
-                <div class="box">
-                    <div>
-                        <img class="songs-image" src="image/senorita.jpg" alt="">
-                    </div>
-                    <div class="songs-name">
-                        <p class="songs-name-first">
-                            Señorita
-                        </p>
-                        <p>
-                            Shawn Mendes
-                        </p>
-                    </div>
-                    <div class="songs-time">
-                        <p>
-                            3:10
-                        </p>
-                    </div>
-                </div>
-
-                <div class="box">
-                    <div>
-                        <img class="songs-image" src="image/Ashley.png" alt="">
-                    </div>
-                    <div class="songs-name">
-                        <p class="songs-name-first">
-                            On A Roll
-                        </p>
-                        <p>
-                            Ashley O
-                        </p>
-                    </div>
-                    <div class="songs-time">
-                        <p>
-                            2:34
-                        </p>
-                    </div>
-                </div>
-
+            <section class="songs" id="songs">
+                <audio ></audio>
             </section>
 
             <button class="songs-button">Все 26 треков</button>
