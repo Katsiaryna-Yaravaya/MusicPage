@@ -30,32 +30,65 @@
     border-left: 4px solid #ffffff;
 }
 
-
 .sidebarImage {
     max-width: 248px;
     height: auto;
 }
 
-.duration{
+.bar {
+    position: relative;
+    width: 248px;
+    height: 32px;
+    margin-top: -36px;
+    padding: 0;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+}
+
+#current-time-text {
+    position: absolute;
+    color: black;
+    font-size: 16px;
+    padding: 7px;
+    z-index: 1;
+    /*display: none;*/
+}
+
+#duration-time-text {
+    position: absolute;
+    margin: -32px;
+    font-size: 16px;
+    padding-top: 7px;
+    right: 40px;
+    color: black;
+}
+
+.duration {
     width: 100%;
-    height: 20px;
+    height: 32px;
 }
 
 input[type="range"] {
     -webkit-appearance: none;
-    background: #A9A9A9;
     outline: none;
-    height: 2px;
     width: -webkit-fill-available;
-    margin: 0 15px;
+    position: relative;
+    width: 100%;
+    height: 32px;
+    margin: 0;
+    padding: 0;
+    background: rgba(255, 255, 255, 0.5);
+    overflow: hidden;
 }
-input[type="range"]::-webkit-slider-thumb{
+
+input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
-    height: 20px;
-    width: 20px;
-    background: #FF8A65;
-    border-radius: 50%;
+    width: 1px;
+    height: 32px;
+    background: white;
     cursor: pointer;
+    box-shadow: -248px 0 0 248px white;
+    z-index: -1;
 }
 
 .sidebar-icon {
@@ -66,7 +99,7 @@ input[type="range"]::-webkit-slider-thumb{
     align-items: center;
 }
 
-.sidebar-icon button{
+.sidebar-icon button {
     border: none;
     height: 25px;
     width: 25px;
@@ -88,10 +121,9 @@ input[type="range"]::-webkit-slider-thumb{
     opacity: 0.5;
 }
 
-.sidebar-icon button .fa-play{
+.sidebar-icon button .fa-play {
     font-size: 25px;
 }
-
 
 .sidebar-copy {
     padding-left: 25px;

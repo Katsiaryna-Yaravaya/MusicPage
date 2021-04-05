@@ -1,23 +1,21 @@
 let container = document.querySelector('.songs');
 
 // для музыки
-let previous = document.querySelector('#pre');
-let play = document.querySelector('#play');
-let next = document.querySelector('#next');
+let play = document.querySelector('#play-sidebar');
 let slider = document.querySelector('#duration-slider');
 let trackImage = document.querySelector('#track-image');
+let playHover = document.querySelector('#play-main-bar');
+let currentTimeText = document.querySelector('#current-time-text');
+let durationTimeText = document.querySelector('#duration-time-text');
 
 let timer;
-let autoplay = 0;
 
 let indexNo = 0;
 let playingSong = false;
 
-//create a audio Element
 let track = document.createElement('audio');
 
 //* создаем объект для хранения постов
-
 const allSong = [
     {
         id: 1,
@@ -53,16 +51,13 @@ const allSong = [
 
 //* для отображения песен
 const showAllSong = () => {
-
     allSong.forEach(({singer, title, time}) => {
 
         let boxDiv = document.createElement('div');
         boxDiv.className = "box";
-
         let imgDiv = document.createElement('div');
         let img = document.createElement('img');
         img.className = "songs-image";
-
         let songsDiv = document.createElement('div');
         songsDiv.className = "songs-name";
         let firstParagraph = document.createElement('p');
@@ -88,11 +83,11 @@ const showAllSong = () => {
         timeP.innerText = `${time}`;
     })
 };
+
 showAllSong()
 
 // function load the track
 function loadTrack(indexNo) {
-    // clearInterval(timer);
     resetSlider();
 
     track.src = allSong[indexNo].path;
@@ -106,7 +101,7 @@ function loadTrack(indexNo) {
 
 loadTrack(indexNo);
 
-// checking.. the song is playing or not
+// checking the song is playing or not
 function justPlay() {
     if (!playingSong) {
         playSong();
@@ -125,6 +120,7 @@ function playSong() {
     track.play().then(r => {});
     playingSong = true;
     play.innerHTML = '<i class="fa fa-pause" ></i>';
+    playHover.innerHTML = '<i class="fa fa-pause" ></i>';
 }
 
 //pause song
@@ -132,8 +128,8 @@ function pauseSong() {
     track.pause();
     playingSong = false;
     play.innerHTML = '<i class="fa fa-play" ></i>';
+    playHover.innerHTML = '<i class="fa fa-play" ></i>';
 }
-
 
 // next song
 function nextSong() {
@@ -167,22 +163,35 @@ function changeDuration() {
     track.currentTime = sliderPosition;
 }
 
+let seeking;
+let seekTo;
+
+slider.addEventListener("mousedown", function (event) {
+    seeking = true;
+});
+slider.addEventListener("mouseup", function (event) {
+    seeking = false;
+});
+track.addEventListener("timeupdate", function () {
+    rangeSlider();
+});
+track.addEventListener("ended", function () {
+    nextSong();
+});
+
 function rangeSlider() {
-    let position = 0;
-
     // update slider position
-    if (!isNaN(track.duration)) {
-        position = track.currentTime * (100 / track.duration);
-        slider.value = position;
-    }
-
-    // function will run when the song is over
-    if (track.ended) {
-        // play.innerHTML = '<i class="fa fa-play" aria-hidden="true"></i>';
-        if (autoplay === 1) {
-            indexNo += 1;
-            loadTrack(indexNo);
-            playSong();
-        }
+    if (track.currentTime !== 0) {
+        slider.value = track.currentTime * (100 / track.duration);
+        let minutes = Math.floor(track.currentTime / 60);
+        let seconds = Math.floor(track.currentTime % 60);
+        let durMins = Math.floor(track.duration / 60);
+        let durSecs = Math.floor(track.duration % 60);
+        if (seconds < 10) {seconds = "0" + seconds}
+        currentTimeText.innerHTML = minutes + ":" + seconds;
+        durationTimeText.innerHTML = durMins + ":" + durSecs;
+    } else {
+        currentTimeText.innerHTML = "0" + ":" + "00";
+        durationTimeText.innerHTML = "0" + ":" + "00";
     }
 }

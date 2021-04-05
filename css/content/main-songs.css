@@ -2,6 +2,10 @@
     padding-left: 48px;
 }
 
+.songs {
+    padding-left: 48px;
+}
+
 .box {
     display: flex;
     align-items: center;
@@ -14,10 +18,32 @@
     width: 48px;
 }
 
+.songs-play-button-hover {
+    background: red;
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    font-size: 18px;
+}
+
+.songs-play-button-hover:hover {
+    background: darkred;
+}
+
+.songs-play-button-hover i {
+    color: white;
+}
+
 .songs-name {
     margin-left: 20px;
     font-size: 14px;
     width: 530px;
+}
+
+.songs-name-hover {
+    width: 400px;
 }
 
 .songs-name-first {
@@ -28,4 +54,36 @@
 .songs-time {
     font-size: 14px;
     color: #A9A9A9;
+}
+
+.songs-time-hover {
+    display: flex;
+}
+
+.songs-button-hover {
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    background: white;
+    border: 2px solid gray;
+    margin-left: 16px;
+    outline: none;
+}
+
+.songs-button-hover:hover {
+    background: darkred;
+    border: none;
+}
+
+.songs-button-hover i {
+    color: gray;
+    font-size: 18px;
+}
+
+.songs-button-hover .fa-sign-out-alt {
+    transform: rotate(270deg);
+}
+
+.songs-button-hover:hover i {
+    color: white;
 }

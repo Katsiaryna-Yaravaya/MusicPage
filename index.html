@@ -53,14 +53,18 @@
         <img class="sidebarImage" src="image/zivert.jpg" alt="">
         <img id="track-image" class="sidebarImage">
 
-        <div class="duration">
-            <input type="range" min="0" max="100" value="0" id="duration-slider" onchange="changeDuration()">
-        </div>
 
+        <div class="bar">
+            <span id="current-time-text" class="left">0:00</span>
+            <div class="duration">
+                <input type="range" min="0" max="100" value="0" step="1" id="duration-slider" onchange="changeDuration()">
+            </div>
+            <span id="duration-time-text" class="right">0:00</span>
+        </div>
 
         <div class="sidebar-icon">
             <button onclick="previousSong()" id="pre"><i class="fas fa-backward" aria-hidden="true"></i></button>
-            <button onclick="justPlay()" id="play"><i class="fas fa-play" aria-hidden="true"></i></button>
+            <button onclick="justPlay()" id="play-sidebar"><i class="fas fa-play" aria-hidden="true"></i></button>
             <button onclick="nextSong()" id="next"><i class="fas fa-forward" aria-hidden="true"></i></button>
         </div>
 
@@ -82,9 +86,9 @@
                 <img class="header-icons-png" src="image/icons-repeat.png" alt="">
                 <i class="fa far fa-random"></i>
                 <i class="fa fas fa-volume-up"></i>
-<!--                <div class="header-volume">-->
-<!--                    <input type="range" class="header-icons-volume" min="0" max="11">-->
-<!--                </div>-->
+                <!--                <div class="header-volume">-->
+                <!--                    <input type="range" class="header-icons-volume" min="0" max="11">-->
+                <!--                </div>-->
                 <button class="buttonRed">Войти</button>
             </div>
         </header>
@@ -112,7 +116,26 @@
             </section>
 
             <section class="songs" id="songs">
-                <audio ></audio>
+                <!--                <audio></audio>-->
+
+
+                <div class="box">
+                    <div>
+                        <button class="songs-play-button-hover" onclick="justPlay()" id="play-main-bar"><i
+                                class="fas fa-play" aria-hidden="true"></i></button>
+                    </div>
+                    <div class="songs-name-hover">
+                        <!--                        <div class="songs-name"><p class="songs-name-first" id="title">Жара</p><p id="artist">Елена Темникова</p></div>-->
+                    </div>
+                    <div class="songs-time-hover">
+                        <button class="songs-button-hover"><i class="far fa-heart" aria-hidden="true"></i></button>
+                        <button class="songs-button-hover"><i class="fas fa-plus" aria-hidden="true"></i></button>
+                        <button class="songs-button-hover"><i class="fas fa-sign-out-alt" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+
+
             </section>
 
             <button class="songs-button">Все 26 треков</button>
